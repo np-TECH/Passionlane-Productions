@@ -1,84 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Passionlane Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"><title>Contact | Passionlane</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.85); backdrop-filter: blur(15px); }
-        .logo-nav { font-family: var(--font-head); font-size: 1.1rem; text-transform: uppercase; text-decoration: none; color: white; }
-        .nav-links { display: flex; gap: 25px; }
-        @media (max-width: 1024px) { .nav-links { display: none; } }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.6; transition: 0.3s; }
-        .nav-links a:hover { opacity: 1; color: var(--accent); }
-        .bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; }
-        
-        .contact-hero { padding: 150px 5% 50px; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
-        
-        .contact-form { padding: 60px 5%; border-right: 1px solid var(--border); }
-        .form-field { margin-bottom: 30px; }
-        label { display: block; font-size: 0.7rem; font-weight: 900; letter-spacing: 3px; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; }
-        input, textarea, select { width: 100%; background: #0a0a0a; border: 1px solid var(--border); padding: 15px; color: white; font-family: 'Inter'; outline: none; transition: 0.3s; }
-        input:focus, textarea:focus { border-color: var(--accent); }
-        button { background: var(--accent); color: white; border: none; padding: 20px 40px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; cursor: pointer; transition: 0.3s; width: 100%; }
-        button:hover { background: white; color: black; }
-
-        .contact-info { padding: 60px 5%; display: flex; flex-direction: column; gap: 40px; }
-        .info-box span { font-size: 0.7rem; font-weight: 900; color: var(--accent); letter-spacing: 3px; display: block; margin-bottom: 10px; }
-        .info-box a { font-family: var(--font-head); font-size: 1.5rem; color: white; text-decoration: none; transition: 0.3s; }
-        .info-box a:hover { color: var(--accent); }
-
-        footer { padding: 80px 5%; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; border-top: 1px solid var(--border); }
+        .form-input { width: 100%; background: #0a0a0a; border: 1px solid var(--border); padding: 20px; color: white; margin-bottom: 20px; outline: none; }
+        .form-input:focus { border-color: var(--accent); }
+        .btn-send { background: var(--accent); color: white; border: none; padding: 20px; width: 100%; font-weight: 900; cursor: pointer; text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo-nav">Passionlane®</a>
-        <div class="nav-links">
-            <a href="work.html">Our Work</a>
-            <a href="agency.html">The Agency</a>
-            <a href="journal.html">Journal</a>
-            <a href="contact.html" style="color:var(--accent); opacity:1;">Contact</a>
-        </div>
-        <div class="bee-badge">B-BBEE LEVEL 1</div>
-    </nav>
-
-    <div class="contact-hero"><h1 style="font-family:var(--font-head); font-size:clamp(3rem, 10vw, 6rem); text-transform:uppercase;">Let's Build<br>What's Next.</h1></div>
+    <nav><a href="index.html" class="logo-nav">Passionlane®</a></nav>
+    <div class="hero-title">Let's Build<br>What's Next</div>
     
-    <section class="contact-grid">
-        <!-- Lead Capture Form -->
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-            <div class="form-field"><label>Full Name</label><input type="text" name="name" placeholder="Who are you?" required></div>
-            <div class="form-field"><label>Email Address</label><input type="email" name="email" placeholder="email@company.com" required></div>
-            <div class="form-field"><label>Service Required</label>
-                <select name="service">
-                    <option>Strategy & Creative</option>
-                    <option>Film & TV Production</option>
-                    <option>Digital & Content Delivery</option>
-                    <option>General Inquiry</option>
-                </select>
-            </div>
-            <div class="form-field"><label>Project Brief</label><textarea name="message" rows="5" placeholder="Tell us about the project..."></textarea></div>
-            <button type="submit">Send Inquiry</button>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; padding: 100px 5%;">
+        <form name="contact" method="POST" data-netlify="true" style="padding-right: 10%;">
+            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">NAME</label>
+            <input type="text" name="name" class="form-input" placeholder="Full Name">
+            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">EMAIL</label>
+            <input type="email" name="email" class="form-input" placeholder="email@company.com">
+            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">BRIEF</label>
+            <textarea name="message" class="form-input" rows="5" placeholder="Project details..."></textarea>
+            <button type="submit" class="btn-send">Send Inquiry</button>
         </form>
-
-        <div class="contact-info">
-            <div class="info-box"><span>Direct Email</span><a href="mailto:info@passionlaneproductions.com">info@passionlane productions.com</a></div>
-            <div class="info-box"><span>Regional Office</span><p style="font-size:1.5rem; font-family:var(--font-head);">Johannesburg, ZA</p></div>
-            <div class="info-box"><span>Phone</span><p style="font-size:1.5rem; font-family:var(--font-head);">(+27) 79 472 8977</p></div>
+        <div style="padding-left: 10%; border-left: 1px solid var(--border);">
+            <span style="font-size:0.7rem; font-weight:900; color:var(--accent);">CONNECT</span>
+            <p style="font-size: 2rem; margin: 20px 0;">info@passionlane productions.com</p>
+            <p style="opacity:0.5;">Johannesburg, ZA</p>
         </div>
-    </section>
-
-    <footer>
-        <div><h2 style="font-family:var(--font-head); font-size:2rem; text-transform: uppercase;">Passionlane.</h2></div>
-        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">ESTABLISHED</span><p>2017</p></div>
-        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">STATUS</span><p>B-BBEE Level 1</p></div>
-    </footer>
+    </div>
 </body>
 </html>
