@@ -8,42 +8,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <style>
         :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif; }
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
-        #cursor { position: fixed; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 10000; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.9); backdrop-filter: blur(15px); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.85); backdrop-filter: blur(15px); }
+        .logo-nav { font-family: var(--font-head); font-size: 1.1rem; text-transform: uppercase; text-decoration: none; color: white; }
+        .nav-links { display: flex; gap: 25px; }
+        @media (max-width: 1024px) { .nav-links { display: none; } }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.6; transition: 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--accent); }
+        .bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; }
+        
         .hero-work { padding: 150px 5% 50px; border-bottom: 1px solid var(--border); }
-        .archive-row { border-bottom: 1px solid var(--border); cursor: pointer; }
+        .archive-row { border-bottom: 1px solid var(--border); cursor: pointer; transition: 0.3s; }
+        .archive-row:hover { background: #0a0a0a; }
         .row-main { display: grid; grid-template-columns: 80px 1.5fr 1fr 1fr 50px; padding: 35px 5%; align-items: center; }
+        @media (max-width: 768px) { .row-main { grid-template-columns: 1fr 1fr; gap: 10px; } }
         .row-year { font-weight: 900; opacity: 0.3; }
         .row-client { font-family: var(--font-head); font-size: 1.5rem; text-transform: uppercase; }
         .row-plus { font-size: 1.5rem; text-align: right; color: var(--accent); transition: 0.4s; }
         .archive-row.active .row-plus { transform: rotate(45deg); }
-        .detail-drawer { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.19, 1, 0.22, 1); background: #0a0a0a; }
+        .detail-drawer { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.19, 1, 0.22, 1); background: #080808; }
         .archive-row.active .detail-drawer { max-height: 600px; border-bottom: 2px solid var(--accent); }
         .detail-grid { padding: 40px 5%; display: grid; grid-template-columns: 1fr 2fr; gap: 60px; }
+        @media (max-width: 768px) { .detail-grid { grid-template-columns: 1fr; gap: 20px; } }
+        .detail-meta span { display: block; font-size: 0.6rem; font-weight: 900; color: var(--accent); letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; }
+        .detail-meta p { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+        .write-up h4 { font-size: 0.7rem; opacity: 0.5; text-transform: uppercase; margin-bottom: 10px; }
         .write-up p { line-height: 1.6; color: #ccc; }
+
+        footer { padding: 80px 5%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 50px; border-top: 1px solid var(--border); }
+        @media (max-width: 768px) { footer { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div id="cursor"></div>
-    <nav><a href="index.html" style="text-decoration:none; color:white; font-family:var(--font-head); text-transform:uppercase;">Passionlane®</a></nav>
+    <nav>
+        <a href="index.html" class="logo-nav">Passionlane®</a>
+        <div class="nav-links">
+            <a href="work.html" style="color:var(--accent); opacity:1;">Our Work</a>
+            <a href="agency.html">The Agency</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="bee-badge">B-BBEE LEVEL 1</div>
+    </nav>
+
     <div class="hero-work"><h1 style="font-family:var(--font-head); font-size:clamp(3rem, 10vw, 8rem); text-transform:uppercase;">Work Archive</h1></div>
-    <div class="archive-row" onclick="this.classList.toggle('active')">
-        <div class="row-main">
-            <div class="row-year">2023</div><div class="row-client">Castle Milk Stout</div><div class="row-project">Black Conversations</div><div class="row-media">SAFTA Nominated</div><div class="row-plus">+</div>
+    
+    <section>
+        <div class="archive-row" onclick="this.classList.toggle('active')">
+            <div class="row-main">
+                <div class="row-year">2023</div><div class="row-client">Castle Milk Stout</div><div class="row-project">Black Conversations</div><div class="row-media">SAFTA Nominated</div><div class="row-plus">+</div>
+            </div>
+            <div class="detail-drawer"><div class="detail-grid"><div class="detail-meta"><span>Challenge</span><p>Cultural Relevance</p><span>Outcome</span><p>SAFTA Nomination</p></div><div class="write-up"><h4>Ask vs Resolve</h4><p>We were tasked with creating a culturally high-stakes talk platform for Castle Milk Stout. We resolved this by blending high-end cinematic aesthetics with real, raw conversational strategy, creating a broadcast-quality production that redefined the brand's voice.</p></div></div></div>
         </div>
-        <div class="detail-drawer"><div class="detail-grid"><div><span style="color:var(--accent); font-size:0.6rem; font-weight:900; letter-spacing:2px;">CHALLENGE</span><p style="font-size:1.2rem; font-weight:700;">Cultural Rethink</p></div><div class="write-up"><h4>Ask vs Resolve</h4><p>The client required a platform for deep cultural resonance. We resolved this with high-end cinematography and strategic insights, resulting in a SAFTA-nominated series.</p></div></div></div>
-    </div>
-    <div class="archive-row" onclick="this.classList.toggle('active')">
-        <div class="row-main">
-            <div class="row-year">2023</div><div class="row-client">Showmax</div><div class="row-project">Widows Unveiled</div><div class="row-media">Original Series</div><div class="row-plus">+</div>
+
+        <div class="archive-row" onclick="this.classList.toggle('active')">
+            <div class="row-main">
+                <div class="row-year">2023</div><div class="row-client">Showmax</div><div class="row-project">Widows Unveiled</div><div class="row-media">Original Reality</div><div class="row-plus">+</div>
+            </div>
+            <div class="detail-drawer"><div class="detail-grid"><div class="detail-meta"><span>Challenge</span><p>Sensitive Storytelling</p><span>Outcome</span><p>Top 10 Trend</p></div><div class="write-up"><h4>Ask vs Resolve</h4><p>To tell the sensitive story of widows with authenticity and respect. We resolved this by employing a fly-on-the-wall production methodology, utilizing specialized camera units to capture raw emotion without breaking the subjects' intimacy.</p></div></div></div>
         </div>
-        <div class="detail-drawer"><div class="detail-grid"><div><span style="color:var(--accent); font-size:0.6rem; font-weight:900; letter-spacing:2px;">CHALLENGE</span><p style="font-size:1.2rem; font-weight:700;">Authenticity</p></div><div class="write-up"><h4>Ask vs Resolve</h4><p>Capturing sensitive grief authentically. We used a documentary-hybrid approach with intimacy-focused lens choices.</p></div></div></div>
-    </div>
-    <script>
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => { gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 }); });
-    </script>
+    </section>
+
+    <footer style="padding: 80px 5%; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; border-top: 1px solid var(--border);">
+        <div><h2 style="font-family:var(--font-head); font-size:2rem; text-transform: uppercase;">Passionlane.</h2></div>
+        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">EXPLORE</span><p><a href="agency.html" style="color:white; text-decoration:none;">The Agency</a></p></div>
+        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">CONNECT</span><p>info@passionlaneproductions.com</p></div>
+    </footer>
 </body>
 </html>
