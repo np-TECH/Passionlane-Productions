@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Passionlane Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255, 255, 255, 0.1); --font-head: 'Syne', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.9); backdrop-filter: blur(15px); }
+        .logo-nav { font-family: var(--font-head); font-size: 1rem; text-transform: uppercase; text-decoration: none; color: white; }
+        
+        .hero-work { padding: 150px 5% 50px; border-bottom: 1px solid var(--border); }
+        
+        /* TABLE RESPONSIVENESS */
+        .archive-table { width: 100%; padding: 0 5% 100px; }
+        .archive-row { border-bottom: 1px solid var(--border); cursor: pointer; transition: 0.3s; overflow: hidden; }
+        
+        .row-main { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; /* Mobile Default */
+            padding: 20px 0; gap: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .row-main { grid-template-columns: 80px 1.5fr 1fr 1fr 50px; padding: 30px 0; }
+        }
+
+        .row-year { font-weight: 900; opacity: 0.4; grid-row: 1; }
+        .row-client { font-family: var(--font-head); font-size: 1.2rem; text-transform: uppercase; grid-column: 1 / span 2; }
+        @media (min-width: 768px) { .row-client { font-size: 1.4rem; grid-column: auto; } }
+        
+        .row-project { font-size: 0.8rem; font-weight: 700; opacity: 0.7; }
+        .row-plus { font-size: 1.5rem; text-align: right; color: var(--accent); transition: transform 0.4s; grid-column: 2; grid-row: 1; }
+
+        .project-detail { max-height: 0; transition: max-height 0.6s cubic-bezier(0.19, 1, 0.22, 1); background: #0a0a0a; }
+        .archive-row.active .project-detail { max-height: 500px; }
+        .archive-row.active .row-plus { transform: rotate(45deg); }
+        .detail-content { padding: 20px; font-size: 0.9rem; line-height: 1.6; color: #ccc; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html" class="logo-nav">Passionlane®</a></nav>
+    <div class="hero-work"><h1 style="font-family:var(--font-head); font-size:clamp(2.5rem, 8vw, 5rem); text-transform:uppercase;">Work Archive</h1></div>
+    <section class="archive-table">
+        <div class="archive-row" onclick="this.classList.toggle('active')">
+            <div class="row-main">
+                <div class="row-year">2023</div>
+                <div class="row-client">Showmax</div>
+                <div class="row-project">Widows Unveiled S1</div>
+                <div class="row-plus">+</div>
+            </div>
+            <div class="project-detail"><div class="detail-content">Strategic reality series production. Exploring themes of culture and resilience.</div></div>
+        </div>
+        <!-- Repeat for all works... -->
+    </section>
+</body>
+</html>
