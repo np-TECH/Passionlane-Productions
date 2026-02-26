@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passionlane Agency</title>
+    <title>Passionlane Agency | Est. 2017</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Syne:wght@800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
     <div id="cursor"></div>
@@ -20,21 +18,40 @@
 
     <section style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;">
         <div id="hero-text" style="display:flex; gap:0.1vw;">
-            <span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">P</span><!-- ... repeat for all letters ... -->
-            <span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">A</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">S</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">S</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">I</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">O</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">N</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">L</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">A</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">N</span><span class="letter" style="font-family:Syne; font-size:8vw; line-height:0.8;">E</span>
+            <span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">P</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">A</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">S</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">S</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">I</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">O</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">N</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">L</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">A</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">N</span><span class="letter" style="font-family:Syne; font-size:clamp(2.5rem, 11vw, 8vw); line-height:0.8;">E</span>
         </div>
-        <p style="margin-top:40px; letter-spacing:10px; opacity:0.4; font-size:0.7rem; text-transform:uppercase;">Creative Agency — World Class</p>
+        <p style="margin-top:40px; letter-spacing:10px; opacity:0.4; font-size:0.6rem; text-transform:uppercase;">Creative Agency — World Class</p>
     </section>
 
-    <!-- Optimized Pillars -->
-    <section style="display:flex; height:100vh; border-top:1px solid var(--border);">
-        <a href="work.html" style="flex:1; position:relative; overflow:hidden; border-right:1px solid var(--border); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; text-decoration:none; color:white;">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0" style="position:absolute; top:0; left:0; width:300%; height:100%; margin-left:-100%; z-index:-1; filter:grayscale(1) brightness(0.2); pointer-events:none;"></iframe>
-            <h2 style="font-family:Syne; font-size:2.5rem; text-transform:uppercase;">Our Work</h2>
-        </a>
-        <!-- Repeat for Agency and Contact ... -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Showmax</span><span>Mzansi Magic</span><span>e.TV</span><span>Standard Bank</span><span>Castle Milk Stout</span><span>Nike</span><span>Red Bull</span><span>DStv</span><span>Unilever</span><span>Sunlight</span><span>TedX</span>
+            <span>Showmax</span><span>Mzansi Magic</span><span>e.TV</span><span>Standard Bank</span><span>Castle Milk Stout</span><span>Nike</span><span>Red Bull</span><span>DStv</span><span>Unilever</span><span>Sunlight</span><span>TedX</span>
+        </div>
+    </div>
+
+    <section style="display:flex; flex-direction:column; border-top:1px solid var(--border);">
+        <style> @media (min-width: 991px) { .row-pillars { flex-direction: row !important; height: 100vh; } } </style>
+        <div class="row-pillars" style="display:flex; flex-direction:column; flex:1;">
+            <a href="work.html" style="flex:1; position:relative; overflow:hidden; border-right:1px solid var(--border); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; text-decoration:none; color:white; min-height:50vh;">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0" style="position:absolute; top:0; left:0; width:300%; height:100%; margin-left:-100%; z-index:-1; filter:grayscale(1) brightness(0.2); pointer-events:none;"></iframe>
+                <h2 style="font-family:Syne; font-size:2.5rem; text-transform:uppercase;">Portfolio</h2>
+            </a>
+            <a href="agency.html" style="flex:1; position:relative; overflow:hidden; border-right:1px solid var(--border); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; text-decoration:none; color:white; min-height:50vh;">
+                <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ?autoplay=1&mute=1&loop=1&playlist=3JZ_D3ELwOQ&controls=0" style="position:absolute; top:0; left:0; width:300%; height:100%; margin-left:-100%; z-index:-1; filter:grayscale(1) brightness(0.2); pointer-events:none;"></iframe>
+                <h2 style="font-family:Syne; font-size:2.5rem; text-transform:uppercase;">Agency Offering</h2>
+            </a>
+        </div>
     </section>
 
+    <footer>
+        <div><h2 style="font-family:Syne; font-size:2.5rem; text-transform:uppercase;">Passionlane.</h2><p style="opacity:0.4; max-width:400px; font-size:0.9rem;">Creative agency powered by production excellence. Est. 2017.</p></div>
+        <div class="footer-links"><span class="footer-head">Explore</span><a class="footer-link" href="work.html">Work</a><a class="footer-link" href="journal.html">Journal</a></div>
+        <div class="footer-links"><span class="footer-head">Connect</span><a class="footer-link" href="mailto:info@passionlaneproductions.com">info@passionlane productions.com</a><a class="footer-link" href="#">LinkedIn</a></div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

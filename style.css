@@ -1,29 +1,37 @@
 :root {
     --bg: #050505; --accent: #FF0033; --text: #ffffff;
-    --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif;
+    --border: rgba(255,255,255,0.12); --font-head: 'Syne', sans-serif;
     --ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; width: 100%; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+html, body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; width: 100%; scroll-behavior: smooth; }
 
-/* --- GLOBAL NAVIGATION --- */
+/* CUSTOM CURSOR */
+#cursor { position: fixed; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 10000; display: none; }
+@media (pointer: fine) { #cursor { display: block; } }
+
+/* UNIVERSAL NAVIGATION */
 nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.85); backdrop-filter: blur(15px); }
-.logo-nav { font-family: var(--font-head); font-size: 1.1rem; text-transform: uppercase; text-decoration: none; color: white; }
+.logo-nav { font-family: var(--font-head); font-size: 1.1rem; text-transform: uppercase; text-decoration: none; color: white; letter-spacing: -1px; }
 .nav-links { display: none; gap: 25px; }
 @media (min-width: 1024px) { .nav-links { display: flex; } }
 .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.6; transition: 0.3s; }
 .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--accent); }
-.bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; }
+.bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; text-transform: uppercase; }
 
-/* --- GLOBAL FOOTER --- */
-footer { padding: 80px 5%; display: grid; grid-template-columns: 1fr; gap: 50px; border-top: 1px solid var(--border); background: #000; }
-@media (min-width: 768px) { footer { grid-template-columns: 2fr 1fr 1fr; } }
-.footer-header { font-size: 0.65rem; font-weight: 900; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; display: block; }
-.footer-links a { display: block; color: white; text-decoration: none; font-size: 0.8rem; margin-bottom: 15px; opacity: 0.5; transition: 0.3s; text-transform: uppercase; font-weight: 700; }
-.footer-links a:hover { opacity: 1; color: var(--accent); padding-left: 5px; }
-
-/* --- UTILITIES --- */
+/* HERO UTILITIES */
 .hero-title { font-family: var(--font-head); font-size: clamp(3rem, 10vw, 8rem); text-transform: uppercase; line-height: 0.85; padding: 150px 5% 80px; border-bottom: 1px solid var(--border); }
-#cursor { position: fixed; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.1s; }
-@media (pointer: coarse) { #cursor { display: none; } }
+
+/* CLIENT MARQUEE */
+.marquee { border-bottom: 1px solid var(--border); padding: 30px 0; overflow: hidden; background: #000; white-space: nowrap; }
+.marquee-content { display: inline-block; animation: scroll 40s linear infinite; }
+.marquee-content span { font-family: var(--font-head); font-size: 1.2rem; margin-right: 60px; opacity: 0.2; text-transform: uppercase; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* UNIVERSAL FOOTER */
+footer { padding: 80px 5%; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr; gap: 50px; background: #000; }
+@media (min-width: 768px) { footer { grid-template-columns: 2fr 1fr 1fr; } }
+.footer-head { font-size: 0.65rem; font-weight: 900; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; display: block; }
+.footer-link { display: block; color: white; text-decoration: none; font-size: 0.8rem; margin-bottom: 15px; opacity: 0.5; transition: 0.3s; text-transform: uppercase; font-weight: 700; }
+.footer-link:hover { opacity: 1; color: var(--accent); padding-left: 5px; }

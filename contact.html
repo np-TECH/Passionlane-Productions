@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Contact | Passionlane</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .form-input { width: 100%; background: #0a0a0a; border: 1px solid var(--border); padding: 20px; color: white; margin-bottom: 20px; outline: none; }
-        .form-input:focus { border-color: var(--accent); }
-        .btn-send { background: var(--accent); color: white; border: none; padding: 20px; width: 100%; font-weight: 900; cursor: pointer; text-transform: uppercase; }
-    </style>
+    <meta charset="UTF-8"><link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav><a href="index.html" class="logo-nav">Passionlane®</a></nav>
-    <div class="hero-title">Let's Build<br>What's Next</div>
-    
-    <div style="display:grid; grid-template-columns: 1fr 1fr; padding: 100px 5%;">
-        <form name="contact" method="POST" data-netlify="true" style="padding-right: 10%;">
-            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">NAME</label>
-            <input type="text" name="name" class="form-input" placeholder="Full Name">
-            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">EMAIL</label>
-            <input type="email" name="email" class="form-input" placeholder="email@company.com">
-            <label style="font-size:0.7rem; font-weight:900; color:var(--accent);">BRIEF</label>
-            <textarea name="message" class="form-input" rows="5" placeholder="Project details..."></textarea>
-            <button type="submit" class="btn-send">Send Inquiry</button>
+    <div id="cursor"></div>
+    <nav><a href="index.html" class="logo-nav">Passionlane®</a><div class="nav-links"><a href="work.html">Work</a><a href="agency.html">Agency</a><a href="journal.html">Journal</a><a href="contact.html" class="active">Contact</a></div></nav>
+    <h1 class="hero-title">Inquiry</h1>
+    <div style="padding: 100px 5%; display:grid; grid-template-columns: 1fr 1fr; gap:100px;">
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="FULL NAME" style="width:100%; padding:20px; background:#111; border:1px solid var(--border); color:white; margin-bottom:20px; outline:none;">
+            <input type="email" name="email" placeholder="EMAIL" style="width:100%; padding:20px; background:#111; border:1px solid var(--border); color:white; margin-bottom:20px; outline:none;">
+            <textarea name="message" placeholder="BRIEF" rows="5" style="width:100%; padding:20px; background:#111; border:1px solid var(--border); color:white; margin-bottom:20px; outline:none;"></textarea>
+            <button type="submit" style="width:100%; padding:20px; background:var(--accent); color:white; font-weight:900; border:none; cursor:pointer;">SEND</button>
         </form>
-        <div style="padding-left: 10%; border-left: 1px solid var(--border);">
-            <span style="font-size:0.7rem; font-weight:900; color:var(--accent);">CONNECT</span>
-            <p style="font-size: 2rem; margin: 20px 0;">info@passionlane productions.com</p>
-            <p style="opacity:0.5;">Johannesburg, ZA</p>
+        <div style="border-left:1px solid var(--border); padding-left:100px;">
+            <span style="color:var(--accent); font-weight:900; letter-spacing:3px;">DIRECT</span>
+            <p style="font-size:2rem; margin-top:20px; font-family:Syne;">info@passionlane productions.com</p>
         </div>
     </div>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

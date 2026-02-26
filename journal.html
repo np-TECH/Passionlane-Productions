@@ -1,56 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal | Passionlane Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
-    <style>
-        :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.85); backdrop-filter: blur(15px); }
-        .logo-nav { font-family: var(--font-head); font-size: 1.1rem; text-transform: uppercase; text-decoration: none; color: white; }
-        .nav-links { display: flex; gap: 25px; }
-        @media (max-width: 1024px) { .nav-links { display: none; } }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.6; transition: 0.3s; }
-        .nav-links a:hover { opacity: 1; color: var(--accent); }
-        .bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; }
-        
-        .journal-hero { padding: 150px 5% 100px; border-bottom: 1px solid var(--border); }
-        .post-card { display: block; padding: 80px 5%; border-bottom: 1px solid var(--border); text-decoration: none; color: white; transition: 0.4s; }
-        .post-card:hover { background: #0a0a0a; }
-        .post-card span { color: var(--accent); font-weight: 900; letter-spacing: 3px; font-size: 0.7rem; }
-        .post-card h2 { font-family: var(--font-head); font-size: 3rem; text-transform: uppercase; margin-top: 20px; line-height: 0.9; }
-        footer { padding: 80px 5%; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; border-top: 1px solid var(--border); }
-    </style>
+    <meta charset="UTF-8"><link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo-nav">Passionlane®</a>
-        <div class="nav-links">
-            <a href="work.html">Our Work</a>
-            <a href="agency.html">The Agency</a>
-            <a href="journal.html" style="color:var(--accent); opacity:1;">Journal</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="bee-badge">B-BBEE LEVEL 1</div>
-    </nav>
-
-    <div class="journal-hero"><h1 style="font-family:var(--font-head); font-size:clamp(3rem, 10vw, 8rem); text-transform:uppercase;">Strategic Journal</h1></div>
-    
-    <section>
-        <a href="#" class="post-card">
-            <span>AWARDS / MOMENTUM</span>
-            <h2>SAFTA Nominated: Castle Milk Stout Black Conversations</h2>
-            <p style="margin-top:20px; opacity:0.5; max-width:600px;">Celebrating our nomination for the 19th Annual SAFTAs. A pivotal moment showcasing our ability to scale production into high-end brand storytelling.</p>
-        </a>
-    </section>
-
-    <footer>
-        <div><h2 style="font-family:var(--font-head); font-size:2rem; text-transform: uppercase;">Passionlane.</h2></div>
-        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">MOMENTUM</span><p>SAFTA Nominees 2026</p></div>
-        <div><span style="color:var(--accent); font-weight:900; font-size:0.7rem;">CONNECT</span><p>info@passionlaneproductions.com</p></div>
-    </footer>
+    <div id="cursor"></div>
+    <nav><a href="index.html" class="logo-nav">Passionlane®</a><div class="nav-links"><a href="work.html">Work</a><a href="agency.html">Agency</a><a href="journal.html" class="active">Journal</a><a href="contact.html">Contact</a></div></nav>
+    <h1 class="hero-title">Journal</h1>
+    <a href="safta-momentum.html" style="display:block; padding:80px 5%; border-bottom:1px solid var(--border); text-decoration:none; color:white; transition:.4s;">
+        <span style="color:var(--accent); font-weight:900; letter-spacing:3px;">AWARDS / 2026</span>
+        <h2 style="font-family:Syne; font-size:3rem; text-transform:uppercase; margin-top:20px; line-height:0.9;">SAFTA Nominated: Castle Milk Stout Black Conversations</h2>
+        <p style="margin-top:20px; opacity:0.5;">Read Intelligence →</p>
+    </a>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
