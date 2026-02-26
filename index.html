@@ -2,78 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Passionlane Agency | World-Class 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passionlane Agency | Creative Agency + Production Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
     <style>
-        :root {
-            --bg: #050505; --accent: #FF0033; --text: #ffffff;
-            --border: rgba(255, 255, 255, 0.1); --font-head: 'Syne', sans-serif;
-            --nav-height: 80px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; width: 100%; }
-
-        /* Custom Cursor - Only for Desktop Mouse */
-        #cursor {
-            position: fixed; width: 12px; height: 12px; background: var(--accent);
-            border-radius: 50%; pointer-events: none; z-index: 10000; display: none;
-        }
-        @media (pointer: fine) { #cursor { display: block; } }
-
-        /* --- NAVIGATION: FLUID --- */
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 5%; height: var(--nav-height); border-bottom: 1px solid var(--border);
-            background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(15px);
-        }
-        .logo-nav { font-family: var(--font-head); font-size: clamp(0.9rem, 2vw, 1.2rem); text-transform: uppercase; text-decoration: none; color: white; }
-        .nav-links { display: none; gap: 2vw; } /* Visible on Tablet+ */
+        :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif; --ease: cubic-bezier(0.19, 1, 0.22, 1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        #cursor { position: fixed; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 10000; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.8); backdrop-filter: blur(15px); }
+        .logo-nav { font-family: var(--font-head); font-size: 1rem; text-transform: uppercase; text-decoration: none; color: white; }
+        .nav-links { display: none; gap: 30px; }
+        @media (min-width: 991px) { .nav-links { display: flex; } }
         .nav-links a { color: white; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.6; transition: 0.3s; }
         .nav-links a:hover { opacity: 1; color: var(--accent); }
-        .bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
-
-        @media (min-width: 991px) { .nav-links { display: flex; } }
-
-        /* --- HERO: FLUID LETTERS --- */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 5%; }
-        .dance-container { display: flex; justify-content: center; align-items: center; width: 100%; max-width: 90vw; flex-wrap: nowrap; }
-        .letter { 
-            font-family: var(--font-head); 
-            font-size: clamp(2.5rem, 12vw, 8.2vw); /* Responsive resizing */
-            line-height: 0.8; text-transform: uppercase; will-change: transform; 
-        }
-        .hero-sub { margin-top: 40px; letter-spacing: clamp(5px, 2vw, 12px); opacity: 0.4; font-size: 0.6rem; text-transform: uppercase; text-align: center; }
-
-        /* --- PILLARS: ADAPTIVE GRID --- */
-        .pillars { display: flex; flex-direction: column; min-height: 100vh; border-top: 1px solid var(--border); }
-        .pillar { 
-            flex: 1; position: relative; overflow: hidden; border-bottom: 1px solid var(--border);
-            display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; 
-            min-height: 50vh; text-decoration: none; color: white;
-        }
-
-        @media (min-width: 991px) {
-            .pillars { flex-direction: row; height: 100vh; }
-            .pillar { border-bottom: none; border-right: 1px solid var(--border); transition: flex 0.8s var(--ease); }
-            .pillar:hover { flex: 2.5; }
-        }
-
-        .pillar iframe { position: absolute; top: 0; left: 0; width: 300%; height: 100%; margin-left: -100%; z-index: -1; filter: grayscale(1) brightness(0.2); transition: 0.8s; pointer-events: none; }
+        .bee-badge { font-size: 0.6rem; font-weight: 900; border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 100px; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 5%; text-align: center; }
+        .dance-container { display: flex; gap: 0.1vw; }
+        .letter { font-family: var(--font-head); font-size: clamp(2.5rem, 12vw, 8.2vw); line-height: 0.8; text-transform: uppercase; will-change: transform; }
+        .hero-tagline { margin-top: 40px; font-size: 0.7rem; letter-spacing: clamp(5px, 2vw, 12px); text-transform: uppercase; opacity: 0.5; }
+        .pillars { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+        @media (min-width: 991px) { .pillars { flex-direction: row; height: 100vh; } }
+        .pillar { flex: 1; position: relative; overflow: hidden; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: flex-end; padding: 50px; text-decoration: none; color: white; transition: flex 0.8s var(--ease); }
+        .pillar:hover { flex: 2.5; }
+        .pillar iframe { position: absolute; top: 0; left: 0; width: 350%; height: 100%; margin-left: -125%; z-index: -1; filter: grayscale(1) brightness(0.2); transition: 0.8s; pointer-events: none; }
         .pillar:hover iframe { filter: grayscale(0) brightness(0.5); }
-        .pillar-title { font-family: var(--font-head); font-size: clamp(1.5rem, 4vw, 2.5rem); text-transform: uppercase; line-height: 0.9; }
-
-        /* --- FOOTER --- */
-        footer { padding: 80px 5%; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr; gap: 40px; }
-        @media (min-width: 768px) { footer { grid-template-columns: 2fr 1fr; } }
-        .social-grid { display: flex; flex-wrap: wrap; gap: 20px; }
-        .social-link { color: white; text-decoration: none; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; opacity: 0.5; }
+        .pillar-title { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; line-height: 0.9; }
     </style>
 </head>
 <body>
@@ -81,79 +38,47 @@
     <nav>
         <a href="index.html" class="logo-nav">Passionlane®</a>
         <div class="nav-links">
-            <a href="work.html">Work</a>
+            <a href="work.html">Our Work</a>
+            <a href="agency.html">The Agency</a>
             <a href="journal.html">Journal</a>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
         <div class="bee-badge">B-BBEE LEVEL 1</div>
     </nav>
-
     <section class="hero">
         <div class="dance-container" id="hero-text">
             <span class="letter">P</span><span class="letter">A</span><span class="letter">S</span><span class="letter">S</span><span class="letter">I</span><span class="letter">O</span><span class="letter">N</span><span class="letter">L</span><span class="letter">A</span><span class="letter">N</span><span class="letter">E</span>
         </div>
-        <p class="hero-sub">Musa Khumalo — Creative Agency 2026</p>
+        <p class="hero-tagline">A Production Legacy Scaled into an Agency</p>
     </section>
-
     <section class="pillars" id="work">
-        <a href="work.html" class="pillar">
+        <a href="agency.html" class="pillar">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0"></iframe>
-            <h2 class="pillar-title">Our<br>Work</h2>
+            <h2 class="pillar-title">Strategic<br>Rethinking</h2>
         </a>
-        <a href="journal.html" class="pillar">
+        <a href="work.html" class="pillar">
             <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ?autoplay=1&mute=1&loop=1&playlist=3JZ_D3ELwOQ&controls=0"></iframe>
-            <h2 class="pillar-title">Strategic<br>Journal</h2>
+            <h2 class="pillar-title">Production<br>Excellence</h2>
         </a>
-        <a href="#contact" class="pillar">
+        <a href="work.html" class="pillar">
             <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?autoplay=1&mute=1&loop=1&playlist=W0LHTWG-UmQ&controls=0"></iframe>
-            <h2 class="pillar-title">Get In<br>Touch</h2>
+            <h2 class="pillar-title">Digital<br>Delivery</h2>
         </a>
     </section>
-
-    <footer id="contact">
-        <div>
-            <h2 style="font-family:var(--font-head); font-size:clamp(2rem, 5vw, 3rem); margin-bottom:20px; text-transform: uppercase;">Passionlane.</h2>
-            <p style="opacity:0.5; max-width:400px; font-size: 0.9rem;">Established in 2015 by Musa Khumalo. Based in Johannesburg, delivering world-class cinematic storytelling globally.</p>
-        </div>
-        <div class="social-grid">
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">TikTok</a>
-        </div>
-    </footer>
-
     <script>
-        // Smooth Scroll
         const lenis = new Lenis();
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
-
-        // Responsive GSAP Logic
-        gsap.registerPlugin(ScrollTrigger);
-        
         const cursor = document.getElementById('cursor');
-        const isTouch = window.matchMedia("(pointer: coarse)").matches;
-
-        if(!isTouch) {
-            document.addEventListener('mousemove', (e) => {
-                gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
-            });
-        }
-
+        document.addEventListener('mousemove', (e) => { gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 }); });
         const letters = document.querySelectorAll('.letter');
         const container = document.getElementById('hero-text');
-        
         container.addEventListener('mouseenter', () => {
-            if(!isTouch) {
-                letters.forEach(l => {
-                    gsap.to(l, { x: gsap.utils.random(-20, 20), y: gsap.utils.random(-30, 30), rotation: gsap.utils.random(-10, 10), color: '#FF0033', duration: 0.5 });
-                });
-                gsap.to(cursor, { scale: 6, mixBlendMode: 'difference', backgroundColor: 'white' });
-            }
+            letters.forEach(l => { gsap.to(l, { x: gsap.utils.random(-25, 25), y: gsap.utils.random(-40, 40), rotation: gsap.utils.random(-15, 15), color: '#FF0033', duration: 0.6, ease: "elastic.out(1, 0.3)" }); });
+            gsap.to(cursor, { scale: 8, mixBlendMode: 'difference', backgroundColor: 'white' });
         });
-
         container.addEventListener('mouseleave', () => {
-            gsap.to(letters, { x: 0, y: 0, rotation: 0, color: 'white', duration: 0.5 });
+            gsap.to(letters, { x: 0, y: 0, rotation: 0, color: 'white', duration: 0.6 });
             gsap.to(cursor, { scale: 1, mixBlendMode: 'normal', backgroundColor: '#FF0033' });
         });
     </script>

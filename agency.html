@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agency | Passionlane</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #FF0033; --text: #ffffff; --border: rgba(255,255,255,0.1); --font-head: 'Syne', sans-serif; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 0; margin: 0; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; padding: 25px 5%; border-bottom: 1px solid var(--border); background: rgba(5,5,5,0.9); backdrop-filter: blur(15px); }
+        .hero-agency { padding: 150px 5% 100px; border-bottom: 1px solid var(--border); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .service-box { padding: 80px 5%; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .service-box h3 { font-family: var(--font-head); font-size: 2rem; text-transform: uppercase; margin-bottom: 20px; }
+        .service-box p { opacity: 0.6; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html" style="text-decoration:none; color:white; font-family:var(--font-head); text-transform:uppercase;">Passionlane®</a></nav>
+    <div class="hero-agency"><h1 style="font-family:var(--font-head); font-size:5vw; text-transform:uppercase;">End-to-End<br>Creative Delivery</h1></div>
+    <section class="services-grid">
+        <div class="service-box"><h3>Strategy</h3><p>Brand positioning, insights, and messaging. We define the audience before production begins.</p></div>
+        <div class="service-box"><h3>Production</h3><p>Film, TV, and branded content delivered at a professional broadcast standard.</p></div>
+        <div class="service-box"><h3>Digital</h3><p>Websites, landing pages, and content systems built for the attention economy.</p></div>
+    </section>
+</body>
+</html>
