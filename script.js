@@ -115,54 +115,88 @@
       // 2023
       {
         year: 2023,
-        title: 'Castle Milk Stout',
-        detail: 'S2–S3 (AFP)',
-        client: 'Mzansi Magic & Castle Milk Stout',
+        title: 'Black Conversations',
+        detail: 'Castle Milk Stout (S2–S3)',
+        client: 'Mzansi Magic • Castle Milk Stout • DStv',
         category: 'Branded',
         summary:
-          'African Film Project (AFP) branded series delivering culture-first storytelling with premium production value for broadcast and brand impact.',
+          'Culture-led panel series delivered as an African Film Project (AFP) — premium visuals, clear editorial arcs, and broadcast-ready finishing.',
+        writeup:
+          'A flagship culture conversation series built with Castle Milk Stout in partnership with Mzansi Magic and DStv. We deliver end-to-end production (field + studio), editorial shaping, and finishing — designed to serve both broadcaster standards and brand impact.',
+        caseStudy: 'project-black-conversations.html',
+        links: [
+          { label: 'Campaign page', url: 'https://www.castlemilkstout.co.za/landing/black-conversations' },
+          { label: 'YouTube playlist', url: 'https://www.youtube.com/playlist?list=PLOjiFB_FyP5U0EWghZkTAThoHMQFFajMP' },
+        ],
       },
       {
         year: 2023,
         title: 'Widows Unveiled',
-        detail: 'S1',
+        detail: 'Showmax Original (S1)',
         client: 'Showmax',
         category: 'TV',
         summary:
-          'Follow-reality series built around intimate, character-led storytelling with a premium documentary tone and a tight post pipeline.',
+          'Premium follow-reality storytelling with a docu tone — built around access, emotion and a tight post pipeline.',
+        writeup:
+          'A Showmax Original exploring the lives and journeys of widows navigating public loss and personal reinvention. We focus on intimate, character-led coverage and a premium finishing approach suited to streaming audiences.',
+        caseStudy: 'project-widows-unveiled.html',
+        links: [
+          { label: 'Showmax page', url: 'https://stories.showmax.com/ke/originals/widows-unveiled' },
+          { label: 'Trailer playlist', url: 'https://www.youtube.com/playlist?list=PLrC3R2F_ZzImYN5rJo3GWq5ojLfYS1-Jj' },
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt31079869/' },
+        ],
       },
       {
         year: 2023,
         title: 'Married Our Way',
-        detail: 'S1',
-        client: 'e.TV',
+        detail: 'Wedding Reality (S1)',
+        client: 'SABC 2',
         category: 'TV',
         summary:
-          'Reality series exploring modern relationships and commitment — delivered with broadcast-ready production and finishing.',
+          'A wedding reality format celebrating distinctive couples and unique ceremonies — delivered with broadcast discipline.',
+        writeup:
+          'A celebration of couples getting married on their own terms — diverse aesthetics, traditions and venues across South Africa. We deliver structured coverage for each episode, shaped for clean broadcast delivery and repeatable turnaround.',
+        caseStudy: 'project-married-our-way.html',
+        links: [
+          { label: 'Teasers (TVSA)', url: 'https://www.tvsa.co.za/user/blogs/viewblogpost.aspx?blogpostid=55810' },
+          { label: 'Press (Sunday World)', url: 'https://sundayworld.co.za/celebrity-news/entertainment/abundance-of-drama-twists-and-turns-in-married-our-way/' },
+        ],
       },
       {
         year: 2023,
-        title: 'Uthando Nesthembu',
+        title: 'Uthando Nes\'thembu',
         detail: 'S7',
         client: 'Mzansi Magic',
         category: 'TV',
         summary:
           'Multi-season follow-reality franchise delivery with consistent schedule discipline, field production and story shaping in post.',
+        writeup:
+          'One of South Africa\'s most-watched follow-reality franchises. We contribute to the long-running production engine — field coverage, story shaping, and delivery aligned to broadcaster standards and tight turnaround cycles.',
+        caseStudy: 'project-uthando-nesthembu.html',
+        links: [
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt36106195/' },
+          { label: 'Awards listing (TVSA)', url: 'https://www.tvsa.co.za/shows/viewshowseasons.aspx?season=17&showId=2394' },
+        ],
       },
       {
         year: 2023,
         title: 'DStv Delicious Festival',
         detail: 'Aftermovie 2023',
-        client: 'Channel O & Sanlam',
+        client: 'Channel O • Sanlam',
         category: 'Events',
         summary:
           'High-energy festival recap capturing performances, crowd moments and brand integration — shot and finished for multi-platform use.',
+        caseStudy: 'project-dstv-delicious.html',
+        links: [
+          { label: 'Festival Instagram', url: 'https://www.instagram.com/dstvdeliciousfestival/' },
+          { label: 'Festival videos', url: 'https://www.youtube.com/hashtag/dstvdeliciousfestival' },
+        ],
       },
       {
         year: 2023,
         title: 'An Intimate Night With Gregory Porter',
         detail: 'Concert Special',
-        client: 'Mzansi Magic Music & Standard Bank',
+        client: 'Mzansi Magic Music • Sanlam',
         category: 'Events',
         summary:
           'Concert special captured with a cinematic multi-camera approach and polished broadcast-ready finishing.',
@@ -171,21 +205,30 @@
       // 2022
       {
         year: 2022,
-        title: 'Castle Milk Stout',
-        detail: 'S1 (AFP)',
-        client: 'Mzansi Magic & Castle Milk Stout',
+        title: 'Black Conversations',
+        detail: 'Castle Milk Stout (S1)',
+        client: 'Mzansi Magic • Castle Milk Stout • DStv',
         category: 'Branded',
         summary:
           'Season one AFP delivery built for both brand resonance and broadcaster requirements, with premium visuals and narrative cohesion.',
+        caseStudy: 'project-black-conversations.html',
+        links: [
+          { label: 'Campaign page', url: 'https://www.castlemilkstout.co.za/landing/black-conversations' },
+          { label: 'YouTube playlist', url: 'https://www.youtube.com/playlist?list=PLOjiFB_FyP5U0EWghZkTAThoHMQFFajMP' },
+        ],
       },
       {
         year: 2022,
-        title: 'Uthando Nesthembu',
+        title: 'Uthando Nes\'thembu',
         detail: 'S6',
         client: 'Mzansi Magic',
         category: 'TV',
         summary:
           'Broadcast-standard follow-reality production delivered with repeatable systems and reliable turnaround.',
+        caseStudy: 'project-uthando-nesthembu.html',
+        links: [
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt36106195/' },
+        ],
       },
       {
         year: 2022,
@@ -213,6 +256,11 @@
         category: 'Events',
         summary:
           'Festival aftermovie capturing headline moments, fashion and atmosphere — optimised for digital release and cutdowns.',
+        caseStudy: 'project-dstv-delicious.html',
+        links: [
+          { label: 'Festival Instagram', url: 'https://www.instagram.com/dstvdeliciousfestival/' },
+          { label: 'Channel O', url: 'https://www.dstv.com/channelo/en-za/home' },
+        ],
       },
       {
         year: 2022,
@@ -227,7 +275,7 @@
         year: 2022,
         title: '2022 World Cup Aftermovie',
         detail: 'Event Film',
-        client: 'Channel O & SuperSport',
+        client: 'Channel O • SuperSport',
         category: 'Events',
         summary:
           'Sports-event recap delivering highlight-driven storytelling and atmosphere coverage for multi-platform distribution.',
@@ -236,18 +284,22 @@
       // 2021
       {
         year: 2021,
-        title: 'Uthando Nesthembu',
+        title: 'Uthando Nes\'thembu',
         detail: 'S5',
         client: 'Mzansi Magic',
         category: 'TV',
         summary:
           'Season delivery within a long-running franchise, combining strong field production with efficient post workflows.',
+        caseStudy: 'project-uthando-nesthembu.html',
+        links: [
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt36106195/' },
+        ],
       },
       {
         year: 2021,
         title: 'The Madiba Do Up',
         detail: 'S1',
-        client: 'Mzansi Magic & SuperSport',
+        client: 'Mzansi Magic • SuperSport',
         category: 'TV',
         summary:
           'Reality series produced for a broad broadcast audience with tight schedule management and repeatable production systems.',
@@ -274,12 +326,16 @@
       // 2020
       {
         year: 2020,
-        title: 'Uthando Nesthembu',
+        title: 'Uthando Nes\'thembu',
         detail: 'S4',
         client: 'Mzansi Magic',
         category: 'TV',
         summary:
           'Follow-reality season delivered under broadcast constraints with consistent quality and turnaround.',
+        caseStudy: 'project-uthando-nesthembu.html',
+        links: [
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt36106195/' },
+        ],
       },
 
       // 2019
@@ -295,7 +351,7 @@
       {
         year: 2019,
         title: 'The Award Ceremony',
-        detail: 'Film',
+        detail: 'Short Film',
         client: 'Independent',
         category: 'Film/Doc',
         summary:
@@ -316,7 +372,7 @@
         year: 2018,
         title: 'Marry Me Now SA',
         detail: 'S1',
-        client: 'One Magic',
+        client: '1Magic (DStv)',
         category: 'TV',
         summary:
           'Relationship-led reality series produced for broadcast, focused on strong participant storytelling and rewatch value.',
@@ -329,15 +385,24 @@
         category: 'Events',
         summary:
           'Festival aftermovie capturing the energy of live performance and culture moments for digital distribution.',
+        caseStudy: 'project-dstv-delicious.html',
+        links: [
+          { label: 'Festival Instagram', url: 'https://www.instagram.com/dstvdeliciousfestival/' },
+          { label: 'Festival videos', url: 'https://www.youtube.com/hashtag/dstvdeliciousfestival' },
+        ],
       },
       {
         year: 2018,
-        title: 'Uthando Nesthembu',
+        title: 'Uthando Nes\'thembu',
         detail: 'S3',
         client: 'Mzansi Magic',
         category: 'TV',
         summary:
-          'Early-season delivery on a flagship follow-reality franchise, building the production discipline that scaled into multi-season work.',
+          'Early-season delivery on a flagship follow-reality franchise, building production discipline that scaled into multi-season work.',
+        caseStudy: 'project-uthando-nesthembu.html',
+        links: [
+          { label: 'IMDb listing', url: 'https://www.imdb.com/title/tt36106195/' },
+        ],
       },
     ];
 
@@ -353,30 +418,87 @@
     const modalClient = document.getElementById('modal-client');
     const modalCategory = document.getElementById('modal-category');
 
+    const modalLinksWrap = document.getElementById('modal-links');
+    const modalLinksList = document.getElementById('modal-links-list');
+    const modalActions = document.getElementById('modal-actions');
+    const modalCase = document.getElementById('modal-case');
+
     function normalize(s) {
       return String(s || '').toLowerCase().trim();
+    }
+
+    // Some browsers treat the `hidden` attribute as a low-specificity rule.
+    // Because we intentionally style modals/nav with explicit `display`, we
+    // hard-toggle both `hidden` and `style.display` so hidden UI never leaks.
+    function hardHide(el) {
+      if (!el) return;
+      el.hidden = true;
+      el.setAttribute('aria-hidden', 'true');
+      el.style.display = 'none';
+    }
+
+    function hardShow(el, displayValue) {
+      if (!el) return;
+      el.hidden = false;
+      el.removeAttribute('aria-hidden');
+      el.style.display = displayValue || '';
     }
 
     function openModal(p) {
       if (!backdrop || !modal) return;
       modalTitle.textContent = p.title;
-      modalBody.textContent = p.summary;
+      modalBody.textContent = p.writeup || p.summary;
       modalYear.textContent = `${p.year} • ${p.detail}`;
       modalClient.textContent = p.client;
       modalCategory.textContent = p.category;
-      backdrop.hidden = false;
-      modal.hidden = false;
+      
+      // Links
+      try {
+        if (modalLinksList) modalLinksList.innerHTML = '';
+        if (modalLinksWrap) modalLinksWrap.hidden = !(p.links && p.links.length);
+        if (p.links && p.links.length && modalLinksList) {
+          p.links.forEach((l) => {
+            if (!l || !l.url) return;
+            const a = document.createElement('a');
+            a.className = 'modal-link';
+            a.href = l.url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.innerHTML = `<span>${l.label || 'Open link'}</span><span style="opacity:.6;">↗</span>`;
+            modalLinksList.appendChild(a);
+          });
+        }
+      } catch (_) {}
+
+      // Actions
+      try {
+        if (modalActions) modalActions.hidden = false;
+        if (modalCase) {
+          if (p.caseStudy) {
+            modalCase.href = p.caseStudy;
+            modalCase.hidden = false;
+          } else {
+            modalCase.hidden = true;
+          }
+        }
+      } catch (_) {}
+
+      hardShow(backdrop, 'block');
+      hardShow(modal, 'grid');
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
       if (!backdrop || !modal) return;
-      backdrop.hidden = true;
-      modal.hidden = true;
+      hardHide(backdrop);
+      hardHide(modal);
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
+
+    // Ensure modal is never visible on first paint.
+    closeModal();
 
     if (backdrop) backdrop.addEventListener('click', closeModal);
     document.addEventListener('keydown', (e) => {
