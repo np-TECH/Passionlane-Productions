@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Passionlane | Creative Agency + Production Studio</title>
   <meta name="description" content="Passionlane is a Johannesburg-based creative agency and production studio delivering strategy, creative, production, post and digital." />
   <link rel="stylesheet" href="style.css" />
@@ -32,32 +32,30 @@
     <div class="nav-drawer" hidden aria-label="Mobile"></div>
   </nav>
 
-  <section style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 5%; text-align:center;">
-    <div id="hero-text" style="display:flex; gap:0.1vw; flex-wrap:wrap; justify-content:center;">
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">P</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">A</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">S</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">S</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">I</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">O</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">N</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">L</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">A</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">N</span>
-      <span class="letter" style="font-family:Syne; font-size:clamp(2.6rem, 11vw, 8rem); line-height:0.85;">E</span>
+  <section class="home-hero">
+    <div id="hero-text" class="hero-word" aria-label="Passionlane">
+      <span class="letter hero-letter">P</span>
+      <span class="letter hero-letter">A</span>
+      <span class="letter hero-letter">S</span>
+      <span class="letter hero-letter">S</span>
+      <span class="letter hero-letter">I</span>
+      <span class="letter hero-letter">O</span>
+      <span class="letter hero-letter">N</span>
+      <span class="letter hero-letter">L</span>
+      <span class="letter hero-letter">A</span>
+      <span class="letter hero-letter">N</span>
+      <span class="letter hero-letter">E</span>
     </div>
 
-    <p style="margin-top:28px; letter-spacing:8px; opacity:0.55; font-size:0.7rem; text-transform:uppercase; font-weight:900;">
-      Creative Agency + Production Studio
-    </p>
+    <p class="hero-tag">Creative Agency + Production Studio</p>
 
-    <p style="margin-top:18px; max-width:920px; opacity:0.75; line-height:1.8;">
+    <p class="hero-desc">
       We build culture-led campaigns and broadcast-standard content — from strategy and creative to production, post and digital delivery.
     </p>
 
-    <div style="margin-top:28px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-      <a class="btn" href="work.html" style="max-width:240px;">View Work →</a>
-      <a class="btn" href="contact.html" style="max-width:240px;">Start a Project →</a>
+    <div class="hero-cta">
+      <a class="btn" href="work.html">View Work →</a>
+      <a class="btn" href="contact.html">Start a Project →</a>
     </div>
   </section>
 
@@ -89,6 +87,79 @@
     <div style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap;">
       <a class="btn" href="work.html" style="max-width:260px;">Open Work Archive →</a>
       <a class="btn" href="agency.html" style="max-width:260px;">See the Offering →</a>
+    </div>
+  </section>
+
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <span class="section-kicker">Watch</span>
+    <h2 class="section-title">Work samples</h2>
+    <p class="section-lede">A quick look at how we shoot, edit and finish — across brands, TV and culture moments.</p>
+
+    <div class="video-grid" style="margin-top:26px;">
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/vc1eKaynbCE"
+            title="Passionlane work sample 01"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-caption">
+          <div class="video-title">Sample 01</div>
+          <div class="video-meta">YouTube</div>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/fcRGkHZKZzQ"
+            title="Passionlane work sample 02"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-caption">
+          <div class="video-title">Sample 02</div>
+          <div class="video-meta">YouTube</div>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/4azDeHxvLmE"
+            title="Passionlane work sample 03"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-caption">
+          <div class="video-title">Sample 03</div>
+          <div class="video-meta">YouTube</div>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/9V9JCrshSRU"
+            title="Passionlane work sample 04"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-caption">
+          <div class="video-title">Sample 04</div>
+          <div class="video-meta">YouTube</div>
+        </div>
+      </article>
     </div>
   </section>
 

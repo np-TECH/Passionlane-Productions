@@ -1,13 +1,30 @@
 (() => {
-  // Smooth scrolling (optional).
+  // Mobile viewport height helper (improves resize + rotation behaviour).
+  const setVh = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+  };
+  setVh();
+  window.addEventListener('resize', setVh);
+  window.addEventListener('orientationchange', setVh);
+
+  // Smooth scrolling (desktop only).
+  let lenis = null;
   try {
-    if (typeof Lenis !== 'undefined') {
-      const lenis = new Lenis();
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+    if (!prefersReduced && !isCoarsePointer && typeof Lenis !== 'undefined') {
+      lenis = new Lenis({ smoothWheel: true, smoothTouch: false });
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
       requestAnimationFrame(raf);
+
+      window.addEventListener('resize', () => {
+        try {
+          if (lenis && typeof lenis.resize === 'function') lenis.resize();
+        } catch (_) {}
+      });
     }
   } catch (_) {}
 
@@ -326,6 +343,7 @@
 
     const searchInput = document.getElementById('work-search');
     const filterSelect = document.getElementById('work-filter');
+    const clearBtn = document.getElementById('work-clear');
 
     const backdrop = document.getElementById('modal-backdrop');
     const modal = document.getElementById('modal');
@@ -421,6 +439,14 @@
 
     if (searchInput) searchInput.addEventListener('input', render);
     if (filterSelect) filterSelect.addEventListener('change', render);
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (filterSelect) filterSelect.value = 'all';
+        render();
+        if (searchInput) searchInput.focus();
+      });
+    }
 
     render();
   }
