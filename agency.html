@@ -1,29 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Agency | Passionlane</title>
+  <meta name="description" content="Passionlane is a Johannesburg-based creative agency and production studio delivering strategy, creative, production, post and digital." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Syne:wght@800&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div id="cursor"></div>
-    <nav>
-        <a href="index.html" class="logo-nav">Passionlane®</a>
-        <div class="nav-links"><a href="work.html">Work</a><a href="agency.html" class="active">Agency</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
-        <div class="bee-badge">B-BBEE LEVEL 1</div>
-    </nav>
-    <h1 class="hero-title">The Offering</h1>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <div style="padding:80px 5%; border-right:1px solid var(--border); border-bottom:1px solid var(--border);">
-            <h3 style="font-family:Syne; text-transform:uppercase; margin-bottom:20px;">Strategy</h3>
-            <p style="opacity:0.6; line-height:1.6;">Defining cultural relevance and messaging roadmap before production begins.</p>
-        </div>
-        <div style="padding:80px 5%; border-right:1px solid var(--border); border-bottom:1px solid var(--border);">
-            <h3 style="font-family:Syne; text-transform:uppercase; margin-bottom:20px;">Production</h3>
-            <p style="opacity:0.6; line-height:1.6;">Film, TV and branded content delivered at a professional broadcast standard.</p>
-        </div>
+  <div id="cursor"></div>
+
+  <nav>
+    <a href="index.html" class="logo-nav">Passionlane®</a>
+
+    <div class="nav-links" aria-label="Primary">
+      <a href="work.html">Work</a>
+      <a href="agency.html" class="active">Agency</a>
+      <a href="journal.html">Journal</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="script.js"></script>
+
+    <div class="nav-right">
+      <div class="bee-badge">B-BBEE LEVEL 1</div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-backdrop" hidden></div>
+    <div class="nav-drawer" hidden aria-label="Mobile">
+      <!-- Filled by script.js (clones .nav-links) -->
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1 class="hero-title">The Agency</h1>
+    <p class="hero-sub">
+      A production legacy scaled into a full-service creative agency — built for speed, quality, and culture-led storytelling.
+    </p>
+  </header>
+
+  <section class="section">
+    <span class="section-kicker">End-to-end delivery</span>
+    <h2 class="section-title">Strategy → Creative → Production → Post → Digital</h2>
+    <p class="section-lede">
+      We move from insight to execution with one integrated team: brand thinking, campaign concepting, on-set delivery, and final finishing.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Brand Strategy & Rethinking</h3>
+        <p>Positioning, audience insight, messaging and content architecture — the roadmap before production begins.</p>
+        <div class="card-tags"><span class="tag">Positioning</span><span class="tag">Messaging</span><span class="tag">Content systems</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Campaign Creation</h3>
+        <p>Original ideas, creative treatments, art direction and brand worlds that translate across TV, digital and live environments.</p>
+        <div class="card-tags"><span class="tag">Concepts</span><span class="tag">Treatments</span><span class="tag">Art direction</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Film & TV Production</h3>
+        <p>Broadcast-standard production: pre-production, crew coordination, multi-camera execution and delivery management.</p>
+        <div class="card-tags"><span class="tag">TV</span><span class="tag">Branded content</span><span class="tag">Stills</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Post-Production & Sound</h3>
+        <p>Editing, story shaping, sound design, grading and packaging — consistent quality control from cut to final masters.</p>
+        <div class="card-tags"><span class="tag">Edit</span><span class="tag">Grade</span><span class="tag">Final mix</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Digital Delivery</h3>
+        <p>Websites, landing pages and content pipelines that help brands move faster and publish with consistency.</p>
+        <div class="card-tags"><span class="tag">Web</span><span class="tag">Launch</span><span class="tag">Distribution</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split">
+    <div>
+      <span class="section-kicker">How we operate</span>
+      <h2 class="section-title">Lean core team. Specialist network.</h2>
+      <p class="section-lede">
+        A small senior team backed by trusted specialists (directors, producers, creatives, post). Repeatable systems. Fast turnaround.
+      </p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-row">
+        <span class="panel-label">Pace</span>
+        <span class="panel-value">Agency speed, broadcast discipline</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-label">Quality</span>
+        <span class="panel-value">QC-driven delivery pipeline</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-label">Scale</span>
+        <span class="panel-value">Systems built for volume</span>
+      </div>
+      <a class="btn" href="contact.html">Start a project →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h2 class="footer-brand">Passionlane.</h2>
+      <p class="footer-muted">Creative agency powered by production excellence.</p>
+    </div>
+
+    <div class="footer-links">
+      <span class="footer-head">Explore</span>
+      <a class="footer-link" href="work.html">Work</a>
+      <a class="footer-link" href="journal.html">Journal</a>
+    </div>
+
+    <div class="footer-links">
+      <span class="footer-head">Connect</span>
+      <a class="footer-link" href="mailto:info@passionlaneproductions.com">info@passionlaneproductions.com</a>
+      <a class="footer-link" href="contact.html">Inquiry</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
